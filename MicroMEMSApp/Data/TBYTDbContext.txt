@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+
+// https://learn.microsoft.com/en-us/ef/core/get-started/winforms
+namespace MicroMEMSApp.Data
+{
+    public class TBYTDbContext : DbContext
+    {
+        public DbSet<TBYT> TBYTs { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseSqlite("Data Source=TBYTs.db");
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TBYT>().HasData(
+                new TBYT { IdTB = 1, NhomTB = "A1", LoaiTB = "B1", TenTB = "C1", Dvt = "D1", HangSX = "E1", NuocSX = "F1", GiaTri = 1000, SoLanBaoTriMotNam = 1 },
+                new TBYT { IdTB = 2, NhomTB = "A2", LoaiTB = "B2", TenTB = "C2", Dvt = "D2", HangSX = "E2", NuocSX = "F2", GiaTri = 2000, SoLanBaoTriMotNam = 2 },
+                new TBYT { IdTB = 3, NhomTB = "A3", LoaiTB = "B3", TenTB = "C3", Dvt = "D3", HangSX = "E3", NuocSX = "F3", GiaTri = 3000, SoLanBaoTriMotNam = 3 },
+                new TBYT { IdTB = 4, NhomTB = "A4", LoaiTB = "B4", TenTB = "C4", Dvt = "D4", HangSX = "E4", NuocSX = "F4", GiaTri = 4000, SoLanBaoTriMotNam = 4 }
+
+               );
+        }
+    }
+}

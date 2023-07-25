@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TBYTDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="LKTBYT_Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaLK" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenLK" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Dvt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SoLuong" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdTBYT" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBYT_Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NhomTB" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LoaiTB" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaTB" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenTB" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Dvt" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="HangSX" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NuocSX" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NamSX" Type="int" Nullable="false" />
+          <Property Name="GiaTri" Type="int" Nullable="false" />
+          <Property Name="SoLanBaoTriMotNam" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_LKTBYT_Table_TBYT_Table">
+          <End Role="TBYT_Table" Type="Self.TBYT_Table" Multiplicity="1" />
+          <End Role="LKTBYT_Table" Type="Self.LKTBYT_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBYT_Table">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LKTBYT_Table">
+              <PropertyRef Name="IdTBYT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TBYTDbModelStoreContainer">
+          <EntitySet Name="LKTBYT_Table" EntityType="Self.LKTBYT_Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBYT_Table" EntityType="Self.TBYT_Table" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_LKTBYT_Table_TBYT_Table" Association="Self.FK_LKTBYT_Table_TBYT_Table">
+            <End Role="TBYT_Table" EntitySet="TBYT_Table" />
+            <End Role="LKTBYT_Table" EntitySet="LKTBYT_Table" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TBYTDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="LKTBYT_Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaLK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenLK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dvt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SoLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdTBYT" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TBYT_Table" Relationship="Self.FK_LKTBYT_Table_TBYT_Table" FromRole="LKTBYT_Table" ToRole="TBYT_Table" />
+        </EntityType>
+        <EntityType Name="TBYT_Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NhomTB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LoaiTB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaTB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenTB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dvt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HangSX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NuocSX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NamSX" Type="Int32" Nullable="false" />
+          <Property Name="GiaTri" Type="Int32" Nullable="false" />
+          <Property Name="SoLanBaoTriMotNam" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="LKTBYT_Table" Relationship="Self.FK_LKTBYT_Table_TBYT_Table" FromRole="TBYT_Table" ToRole="LKTBYT_Table" />
+        </EntityType>
+        <Association Name="FK_LKTBYT_Table_TBYT_Table">
+          <End Role="TBYT_Table" Type="Self.TBYT_Table" Multiplicity="1" />
+          <End Role="LKTBYT_Table" Type="Self.LKTBYT_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBYT_Table">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LKTBYT_Table">
+              <PropertyRef Name="IdTBYT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TBYTDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LKTBYT_Table" EntityType="Self.LKTBYT_Table" />
+          <EntitySet Name="TBYT_Table" EntityType="Self.TBYT_Table" />
+          <AssociationSet Name="FK_LKTBYT_Table_TBYT_Table" Association="Self.FK_LKTBYT_Table_TBYT_Table">
+            <End Role="TBYT_Table" EntitySet="TBYT_Table" />
+            <End Role="LKTBYT_Table" EntitySet="LKTBYT_Table" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TBYTDbModelStoreContainer" CdmEntityContainer="TBYTDbEntities">
+          <EntitySetMapping Name="LKTBYT_Table">
+            <EntityTypeMapping TypeName="TBYTDbModel.LKTBYT_Table">
+              <MappingFragment StoreEntitySet="LKTBYT_Table">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MaLK" ColumnName="MaLK" />
+                <ScalarProperty Name="TenLK" ColumnName="TenLK" />
+                <ScalarProperty Name="Dvt" ColumnName="Dvt" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="IdTBYT" ColumnName="IdTBYT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBYT_Table">
+            <EntityTypeMapping TypeName="TBYTDbModel.TBYT_Table">
+              <MappingFragment StoreEntitySet="TBYT_Table">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NhomTB" ColumnName="NhomTB" />
+                <ScalarProperty Name="LoaiTB" ColumnName="LoaiTB" />
+                <ScalarProperty Name="MaTB" ColumnName="MaTB" />
+                <ScalarProperty Name="TenTB" ColumnName="TenTB" />
+                <ScalarProperty Name="Dvt" ColumnName="Dvt" />
+                <ScalarProperty Name="HangSX" ColumnName="HangSX" />
+                <ScalarProperty Name="NuocSX" ColumnName="NuocSX" />
+                <ScalarProperty Name="NamSX" ColumnName="NamSX" />
+                <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
+                <ScalarProperty Name="SoLanBaoTriMotNam" ColumnName="SoLanBaoTriMotNam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
