@@ -31,35 +31,37 @@ namespace MicroMEMSApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTitle = new System.Windows.Forms.Label();
             this.btnAddTBYT = new System.Windows.Forms.Button();
             this.dataGridViewTBYTs = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nhomTBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loaiTBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maTBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenTBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hangSXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nuocSXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namSXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaTriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLanBaoTriMotNamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UpdateTBYT = new System.Windows.Forms.DataGridViewButtonColumn();
             this.DeleteTBYT = new System.Windows.Forms.DataGridViewButtonColumn();
             this.DetailLKTBYT = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tBYTTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBYTTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tBYTDbDataSet = new MicroMEMSApp.TBYTDbDataSet();
+            this.tBYTTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnRefreshDataGridView = new System.Windows.Forms.Button();
             this.tBYT_TableTableAdapter = new MicroMEMSApp.TBYTDbDataSetTableAdapters.TBYT_TableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTBYTs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBYTTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBYTTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBYTDbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBYTTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -85,154 +87,146 @@ namespace MicroMEMSApp
             // dataGridViewTBYTs
             // 
             this.dataGridViewTBYTs.AutoGenerateColumns = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Bisque;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTBYTs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewTBYTs.ColumnHeadersDefaultCellStyle.Font = new Font("arial", 8, FontStyle.Regular);
-
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTBYTs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTBYTs.ColumnHeadersDefaultCellStyle.Font = new Font("arial", 8, FontStyle.Bold);
             this.dataGridViewTBYTs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTBYTs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nhomTBDataGridViewTextBoxColumn,
-            this.loaiTBDataGridViewTextBoxColumn,
-            this.maTBDataGridViewTextBoxColumn,
-            this.tenTBDataGridViewTextBoxColumn,
-            this.dvtDataGridViewTextBoxColumn,
-            this.hangSXDataGridViewTextBoxColumn,
-            this.nuocSXDataGridViewTextBoxColumn,
-            this.namSXDataGridViewTextBoxColumn,
-            this.giaTriDataGridViewTextBoxColumn,
-            this.soLanBaoTriMotNamDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
             this.UpdateTBYT,
             this.DeleteTBYT,
             this.DetailLKTBYT});
-            this.dataGridViewTBYTs.DataSource = this.tBYTTableBindingSource;
+            this.dataGridViewTBYTs.DataSource = this.tBYTTableBindingSource1;
             this.dataGridViewTBYTs.EnableHeadersVisualStyles = false;
             this.dataGridViewTBYTs.Location = new System.Drawing.Point(22, 121);
             this.dataGridViewTBYTs.Name = "dataGridViewTBYTs";
             this.dataGridViewTBYTs.RowHeadersVisible = false;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dataGridViewTBYTs.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridViewTBYTs.Size = new System.Drawing.Size(1222, 554);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dataGridViewTBYTs.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTBYTs.Size = new System.Drawing.Size(1304, 554);
             this.dataGridViewTBYTs.TabIndex = 2;
             this.dataGridViewTBYTs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTBYTs_CellClick);
             // 
-            // idDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 50;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
-            // nhomTBDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.nhomTBDataGridViewTextBoxColumn.DataPropertyName = "NhomTB";
-            this.nhomTBDataGridViewTextBoxColumn.HeaderText = "NhomTB";
-            this.nhomTBDataGridViewTextBoxColumn.Name = "nhomTBDataGridViewTextBoxColumn";
-            this.nhomTBDataGridViewTextBoxColumn.Width = 80;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NhomTB";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nhom Thiet Bi";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // loaiTBDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.loaiTBDataGridViewTextBoxColumn.DataPropertyName = "LoaiTB";
-            this.loaiTBDataGridViewTextBoxColumn.HeaderText = "LoaiTB";
-            this.loaiTBDataGridViewTextBoxColumn.Name = "loaiTBDataGridViewTextBoxColumn";
-            this.loaiTBDataGridViewTextBoxColumn.Width = 80;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "LoaiTB";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Loai Thiet Bi";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // maTBDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.maTBDataGridViewTextBoxColumn.DataPropertyName = "MaTB";
-            this.maTBDataGridViewTextBoxColumn.HeaderText = "MaTB";
-            this.maTBDataGridViewTextBoxColumn.Name = "maTBDataGridViewTextBoxColumn";
-            this.maTBDataGridViewTextBoxColumn.Width = 80;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "MaTB";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Ma Thiet Bi";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // tenTBDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.tenTBDataGridViewTextBoxColumn.DataPropertyName = "TenTB";
-            this.tenTBDataGridViewTextBoxColumn.HeaderText = "TenTB";
-            this.tenTBDataGridViewTextBoxColumn.Name = "tenTBDataGridViewTextBoxColumn";
-            this.tenTBDataGridViewTextBoxColumn.Width = 80;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "TenTB";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Ten Thiet Bi";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 150;
             // 
-            // dvtDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.dvtDataGridViewTextBoxColumn.DataPropertyName = "Dvt";
-            this.dvtDataGridViewTextBoxColumn.HeaderText = "Dvt";
-            this.dvtDataGridViewTextBoxColumn.Name = "dvtDataGridViewTextBoxColumn";
-            this.dvtDataGridViewTextBoxColumn.Width = 80;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Dvt";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Don Vi Tinh";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 50;
             // 
-            // hangSXDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn7
             // 
-            this.hangSXDataGridViewTextBoxColumn.DataPropertyName = "HangSX";
-            this.hangSXDataGridViewTextBoxColumn.HeaderText = "HangSX";
-            this.hangSXDataGridViewTextBoxColumn.Name = "hangSXDataGridViewTextBoxColumn";
-            this.hangSXDataGridViewTextBoxColumn.Width = 80;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "HangSX";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Hang San Xuat";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // nuocSXDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn8
             // 
-            this.nuocSXDataGridViewTextBoxColumn.DataPropertyName = "NuocSX";
-            this.nuocSXDataGridViewTextBoxColumn.HeaderText = "NuocSX";
-            this.nuocSXDataGridViewTextBoxColumn.Name = "nuocSXDataGridViewTextBoxColumn";
-            this.nuocSXDataGridViewTextBoxColumn.Width = 80;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "NuocSX";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Nuoc San Xuat";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // namSXDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn9
             // 
-            this.namSXDataGridViewTextBoxColumn.DataPropertyName = "NamSX";
-            this.namSXDataGridViewTextBoxColumn.HeaderText = "NamSX";
-            this.namSXDataGridViewTextBoxColumn.Name = "namSXDataGridViewTextBoxColumn";
-            this.namSXDataGridViewTextBoxColumn.Width = 80;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "NamSX";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Nam San Xuat";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // giaTriDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn10
             // 
-            this.giaTriDataGridViewTextBoxColumn.DataPropertyName = "GiaTri";
-            this.giaTriDataGridViewTextBoxColumn.HeaderText = "GiaTri";
-            this.giaTriDataGridViewTextBoxColumn.Name = "giaTriDataGridViewTextBoxColumn";
-            this.giaTriDataGridViewTextBoxColumn.Width = 80;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "GiaTri";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Gia Tri";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
-            // soLanBaoTriMotNamDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn11
             // 
-            this.soLanBaoTriMotNamDataGridViewTextBoxColumn.DataPropertyName = "SoLanBaoTriMotNam";
-            this.soLanBaoTriMotNamDataGridViewTextBoxColumn.HeaderText = "SoLanBaoTriMotNam";
-            this.soLanBaoTriMotNamDataGridViewTextBoxColumn.Name = "soLanBaoTriMotNamDataGridViewTextBoxColumn";
-            this.soLanBaoTriMotNamDataGridViewTextBoxColumn.Width = 150;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "SoLanBaoTriMotNam";
+            this.dataGridViewTextBoxColumn11.HeaderText = "So Lan Bao Tri Mot Nam";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 50;
             // 
             // UpdateTBYT
             // 
             this.UpdateTBYT.DataPropertyName = "Id";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DarkGoldenrod;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            this.UpdateTBYT.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGoldenrod;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.UpdateTBYT.DefaultCellStyle = dataGridViewCellStyle2;
             this.UpdateTBYT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateTBYT.HeaderText = "Update";
+            this.UpdateTBYT.HeaderText = "Sua";
             this.UpdateTBYT.Name = "UpdateTBYT";
             this.UpdateTBYT.ReadOnly = true;
-            this.UpdateTBYT.Text = "Update Record";
+            this.UpdateTBYT.Text = "Sua Thiet Bi";
             this.UpdateTBYT.UseColumnTextForButtonValue = true;
             // 
             // DeleteTBYT
             // 
             this.DeleteTBYT.DataPropertyName = "Id";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.OrangeRed;
-            this.DeleteTBYT.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.OrangeRed;
+            this.DeleteTBYT.DefaultCellStyle = dataGridViewCellStyle3;
             this.DeleteTBYT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteTBYT.HeaderText = "Delete";
+            this.DeleteTBYT.HeaderText = "Xoa";
             this.DeleteTBYT.Name = "DeleteTBYT";
             this.DeleteTBYT.ReadOnly = true;
-            this.DeleteTBYT.Text = "Delete Record";
+            this.DeleteTBYT.Text = "Xoa Thiet Bi";
             this.DeleteTBYT.UseColumnTextForButtonValue = true;
             // 
             // DetailLKTBYT
             // 
             this.DetailLKTBYT.DataPropertyName = "Id";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.DetailLKTBYT.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DetailLKTBYT.DefaultCellStyle = dataGridViewCellStyle4;
             this.DetailLKTBYT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DetailLKTBYT.HeaderText = "Chi Tiet Linh Kien";
             this.DetailLKTBYT.Name = "DetailLKTBYT";
@@ -240,15 +234,19 @@ namespace MicroMEMSApp
             this.DetailLKTBYT.Text = "Xem Linh Kien";
             this.DetailLKTBYT.UseColumnTextForButtonValue = true;
             // 
-            // tBYTTableBindingSource
+            // tBYTTableBindingSource1
             // 
-            this.tBYTTableBindingSource.DataMember = "TBYT_Table";
-            this.tBYTTableBindingSource.DataSource = this.tBYTDbDataSet;
+            this.tBYTTableBindingSource1.DataMember = "TBYT_Table";
+            this.tBYTTableBindingSource1.DataSource = this.tBYTDbDataSet;
             // 
             // tBYTDbDataSet
             // 
             this.tBYTDbDataSet.DataSetName = "TBYTDbDataSet";
             this.tBYTDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBYTTableBindingSource
+            // 
+            this.tBYTTableBindingSource.DataMember = "TBYT_Table";
             // 
             // btnRefreshDataGridView
             // 
@@ -279,8 +277,9 @@ namespace MicroMEMSApp
             this.Text = "Quan Li Thiet Bi Y Te";
             this.Load += new System.EventHandler(this.TBYTForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTBYTs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBYTTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBYTTableBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBYTDbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBYTTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,9 +291,7 @@ namespace MicroMEMSApp
         private System.Windows.Forms.Button btnAddTBYT;
         private System.Windows.Forms.DataGridView dataGridViewTBYTs;
         private System.Windows.Forms.Button btnRefreshDataGridView;
-        private TBYTDbDataSet tBYTDbDataSet;
         private System.Windows.Forms.BindingSource tBYTTableBindingSource;
-        private TBYTDbDataSetTableAdapters.TBYT_TableTableAdapter tBYT_TableTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nhomTBDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loaiTBDataGridViewTextBoxColumn;
@@ -306,6 +303,20 @@ namespace MicroMEMSApp
         private System.Windows.Forms.DataGridViewTextBoxColumn namSXDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaTriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLanBaoTriMotNamDataGridViewTextBoxColumn;
+        private TBYTDbDataSet tBYTDbDataSet;
+        private System.Windows.Forms.BindingSource tBYTTableBindingSource1;
+        private TBYTDbDataSetTableAdapters.TBYT_TableTableAdapter tBYT_TableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewButtonColumn UpdateTBYT;
         private System.Windows.Forms.DataGridViewButtonColumn DeleteTBYT;
         private System.Windows.Forms.DataGridViewButtonColumn DetailLKTBYT;

@@ -227,7 +227,7 @@
             this.btnSubmitUpdateTBYT.Name = "btnSubmitUpdateTBYT";
             this.btnSubmitUpdateTBYT.Size = new System.Drawing.Size(75, 23);
             this.btnSubmitUpdateTBYT.TabIndex = 3;
-            this.btnSubmitUpdateTBYT.Text = "Update";
+            this.btnSubmitUpdateTBYT.Text = "Sua Thiet Bi";
             this.btnSubmitUpdateTBYT.UseVisualStyleBackColor = true;
             this.btnSubmitUpdateTBYT.Click += new System.EventHandler(this.btnSubmitUpdateTBYT_Click);
             // 

@@ -41,6 +41,8 @@ namespace MicroMEMSApp
         private void TBYTForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'tBYTDbDataSet.TBYT_Table' table. You can move, or remove it, as needed.
+            this.tBYT_TableTableAdapter.Fill(this.tBYTDbDataSet.TBYT_Table);
+            // TODO: This line of code loads data into the 'tBYTDbDataSet.TBYT_Table' table. You can move, or remove it, as needed.
             //this.tBYT_TableTableAdapter.Fill(this.tBYTDbDataSet.TBYT_Table);
             LoadTBYTData();
 
@@ -98,7 +100,17 @@ namespace MicroMEMSApp
                 }
                 else if (dataGridViewTBYTs.Columns[e.ColumnIndex].Name == "DetailLKTBYT")
                 {
-                    MessageBox.Show("Xem Chi Tiet Linh Kien");
+                    // get the row index of the cell clicked
+                    var rowIndex = e.RowIndex;
+
+                    // specify 0, if the Id is in the first Column else in place of 0 e.ColumnIndex
+                    int idTBYT = Convert.ToInt32(dataGridViewTBYTs.Rows[e.RowIndex].Cells[0].Value);
+
+                    // Create a new form
+                    LKTBYTForm newLKTBYTForm = new LKTBYTForm(this.tbytDbEntities, idTBYT); // tbytDbEntities, idTBYTUpdate
+                    newLKTBYTForm.ShowDialog();
+                    //TBYTUpdateForm newTBYTUpdateForm = new TBYTUpdateForm(tbytDbEntities, idTBYTUpdate);
+                    //MessageBox.Show("Xem Chi Tiet Linh Kien");
                 }
             }
         }

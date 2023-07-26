@@ -80,12 +80,13 @@ namespace MicroMEMSApp
 
             // Save changes to database
             tbytDbEntities.SaveChanges();
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
         private void TBYTUpdateForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            //this.DialogResult = DialogResult.OK;
         }
     }
 }

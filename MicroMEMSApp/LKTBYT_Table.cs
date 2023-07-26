@@ -18,7 +18,7 @@ namespace MicroMEMSApp
         public string MaLK { get; set; }
         public string TenLK { get; set; }
         public string Dvt { get; set; }
-        public string SoLuong { get; set; }
+        public int SoLuong { get; set; }
         public int IdTBYT { get; set; }
     
         public virtual TBYT_Table TBYT_Table { get; set; }

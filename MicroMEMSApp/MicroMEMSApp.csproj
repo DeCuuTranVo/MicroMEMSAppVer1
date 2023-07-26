@@ -144,24 +144,51 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\TBYT.cs" />
+    <Compile Include="LKTBYTCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LKTBYTCreateForm.Designer.cs">
+      <DependentUpon>LKTBYTCreateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LKTBYTForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LKTBYTForm.Designer.cs">
       <DependentUpon>LKTBYTForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LKTBYTUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LKTBYTUpdateForm.Designer.cs">
+      <DependentUpon>LKTBYTUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LKTBYT_Table.cs">
       <DependentUpon>TBYTDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBYTDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TBYTDb.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="TBYTDb.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TBYTDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="TBYTDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TBYTDb.edmx</DependentUpon>
+    </Compile>
     <Compile Include="TBYTDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TBYTDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TBYTDbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TBYTDbDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="TBYTUpdateForm.cs">
       <SubType>Form</SubType>
@@ -179,16 +206,6 @@
     <Compile Include="TBYTCreateForm.Designer.cs">
       <DependentUpon>TBYTCreateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TBYTDb.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TBYTDb.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBYTDb.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TBYTDb.edmx</DependentUpon>
-    </Compile>
     <Compile Include="TBYTForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,14 +216,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="TBYTDb.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TBYTDb.Context.cs</LastGenOutput>
       <DependentUpon>TBYTDb.edmx</DependentUpon>
+      <LastGenOutput>TBYTDb.Context.cs</LastGenOutput>
     </Content>
     <Content Include="TBYTDb.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TBYTDb.edmx</DependentUpon>
       <LastGenOutput>TBYTDb.cs</LastGenOutput>
     </Content>
+    <EmbeddedResource Include="LKTBYTCreateForm.resx">
+      <DependentUpon>LKTBYTCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LKTBYTForm.resx">
+      <DependentUpon>LKTBYTForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LKTBYTUpdateForm.resx">
+      <DependentUpon>LKTBYTUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -253,6 +279,17 @@
     </None>
     <None Include="TBYTDbDataSet.xss">
       <DependentUpon>TBYTDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TBYTDbDataSet1.xsc">
+      <DependentUpon>TBYTDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TBYTDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TBYTDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TBYTDbDataSet1.xss">
+      <DependentUpon>TBYTDbDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

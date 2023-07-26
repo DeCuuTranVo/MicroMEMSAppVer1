@@ -10,10 +10,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MaLK" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="TenLK" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Dvt" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="SoLuong" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaLK" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenLK" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Dvt" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
           <Property Name="IdTBYT" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="TBYT_Table">
@@ -62,10 +62,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MaLK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TenLK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Dvt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SoLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaLK" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="TenLK" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Dvt" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
           <Property Name="IdTBYT" Type="Int32" Nullable="false" />
           <NavigationProperty Name="TBYT_Table" Relationship="Self.FK_LKTBYT_Table_TBYT_Table" FromRole="LKTBYT_Table" ToRole="TBYT_Table" />
         </EntityType>
