@@ -165,6 +165,24 @@
     <Compile Include="LKTBYT_Table.cs">
       <DependentUpon>TBYTDb.tt</DependentUpon>
     </Compile>
+    <Compile Include="MainCreateUpdateLKTBYTForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainCreateUpdateLKTBYTForm.Designer.cs">
+      <DependentUpon>MainCreateUpdateLKTBYTForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainLKTBYTForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainLKTBYTForm.Designer.cs">
+      <DependentUpon>MainLKTBYTForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TBYTDb.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -232,6 +250,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LKTBYTUpdateForm.resx">
       <DependentUpon>LKTBYTUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainCreateUpdateLKTBYTForm.resx">
+      <DependentUpon>MainCreateUpdateLKTBYTForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainLKTBYTForm.resx">
+      <DependentUpon>MainLKTBYTForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,4 +1,4 @@
-﻿Step 1: Create a simple GUI that can input data and show result in messageBox
+﻿Step 1: Create a simple GUI that can input data and show result in messageBox (Done)
 	TBYT
 	LKTBYT
 Goal of 24/07
@@ -23,8 +23,12 @@ Goal of 24/07
 		SoLuong (So Luong)
 
 Step 2: Use Entity Framework to create database using code-first manner
-	Note: Relationship
+	Note: Relationship (Done)
 
 Goal of 25/07
 ---------------------------------------------------------------------------
-Step 3: Use Crystal Report to output data in an Excel file?
+Step 3: Complete TBYT Module, now do LKTBYT module
+	3.1. Search and filter function in TBYT module
+	3.2. DataGridView, CRUD in LKTBYT module
+
+Step 4: Use Crystal Report to output data in an Excel file?

@@ -14,10 +14,10 @@ namespace MicroMEMSApp
     public partial class TBYTForm : Form
     {
         private readonly TBYTDbEntities tbytDbEntities;
-        public TBYTForm()
+        public TBYTForm(TBYTDbEntities tbytDbEntities)
         {
             InitializeComponent();
-            tbytDbEntities = new TBYTDbEntities();
+            this.tbytDbEntities = tbytDbEntities;
 
             //dataGridViewTBYTs.CellClick += DataGridViewTBYTs_CellClick;
         }

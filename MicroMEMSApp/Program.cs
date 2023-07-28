@@ -16,7 +16,7 @@ namespace MicroMEMSApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TBYTForm());
+            Application.Run(new MainForm());
         }
     }
 }

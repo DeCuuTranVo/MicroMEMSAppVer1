@@ -50,6 +50,7 @@
             this.labelTitleCreateLKTBYT.Size = new System.Drawing.Size(197, 13);
             this.labelTitleCreateLKTBYT.TabIndex = 0;
             this.labelTitleCreateLKTBYT.Text = "Nhap Thong Tin Linh Kien Thiet Bi Y Te";
+            this.labelTitleCreateLKTBYT.Click += new System.EventHandler(this.labelTitleCreateLKTBYT_Click);
             // 
             // labelMaLK
             // 
@@ -59,6 +60,7 @@
             this.labelMaLK.Size = new System.Drawing.Size(69, 13);
             this.labelMaLK.TabIndex = 1;
             this.labelMaLK.Text = "Ma Linh Kien";
+            this.labelMaLK.Click += new System.EventHandler(this.labelMaLK_Click);
             // 
             // labelTenLK
             // 
@@ -68,6 +70,7 @@
             this.labelTenLK.Size = new System.Drawing.Size(73, 13);
             this.labelTenLK.TabIndex = 1;
             this.labelTenLK.Text = "Ten Linh Kien";
+            this.labelTenLK.Click += new System.EventHandler(this.labelTenLK_Click);
             // 
             // labelDvt
             // 
@@ -77,6 +80,7 @@
             this.labelDvt.Size = new System.Drawing.Size(63, 13);
             this.labelDvt.TabIndex = 1;
             this.labelDvt.Text = "Don Vi Tinh";
+            this.labelDvt.Click += new System.EventHandler(this.labelDvt_Click);
             // 
             // labelSoLuong
             // 
@@ -86,6 +90,7 @@
             this.labelSoLuong.Size = new System.Drawing.Size(53, 13);
             this.labelSoLuong.TabIndex = 1;
             this.labelSoLuong.Text = "So Luong";
+            this.labelSoLuong.Click += new System.EventHandler(this.labelSoLuong_Click);
             // 
             // labelTBYTParent
             // 
@@ -95,6 +100,7 @@
             this.labelTBYTParent.Size = new System.Drawing.Size(69, 13);
             this.labelTBYTParent.TabIndex = 2;
             this.labelTBYTParent.Text = "Thiet Bi Y Te";
+            this.labelTBYTParent.Click += new System.EventHandler(this.labelTBYTParent_Click);
             // 
             // textBoxMaLK
             // 
@@ -102,6 +108,7 @@
             this.textBoxMaLK.Name = "textBoxMaLK";
             this.textBoxMaLK.Size = new System.Drawing.Size(190, 20);
             this.textBoxMaLK.TabIndex = 3;
+            this.textBoxMaLK.TextChanged += new System.EventHandler(this.textBoxMaLK_TextChanged);
             // 
             // textBoxTenLK
             // 
@@ -109,6 +116,7 @@
             this.textBoxTenLK.Name = "textBoxTenLK";
             this.textBoxTenLK.Size = new System.Drawing.Size(190, 20);
             this.textBoxTenLK.TabIndex = 3;
+            this.textBoxTenLK.TextChanged += new System.EventHandler(this.textBoxTenLK_TextChanged);
             // 
             // textBoxDvt
             // 
@@ -116,6 +124,7 @@
             this.textBoxDvt.Name = "textBoxDvt";
             this.textBoxDvt.Size = new System.Drawing.Size(208, 20);
             this.textBoxDvt.TabIndex = 3;
+            this.textBoxDvt.TextChanged += new System.EventHandler(this.textBoxDvt_TextChanged);
             // 
             // textBoxSoLuong
             // 
@@ -123,6 +132,7 @@
             this.textBoxSoLuong.Name = "textBoxSoLuong";
             this.textBoxSoLuong.Size = new System.Drawing.Size(208, 20);
             this.textBoxSoLuong.TabIndex = 3;
+            this.textBoxSoLuong.TextChanged += new System.EventHandler(this.textBoxSoLuong_TextChanged);
             // 
             // textBoxTBYTParent
             // 

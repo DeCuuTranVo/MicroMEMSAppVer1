@@ -56,5 +56,55 @@ namespace MicroMEMSApp
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void labelTitleCreateLKTBYT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelMaLK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMaLK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDvt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDvt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTenLK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTenLK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelSoLuong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSoLuong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTBYTParent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
