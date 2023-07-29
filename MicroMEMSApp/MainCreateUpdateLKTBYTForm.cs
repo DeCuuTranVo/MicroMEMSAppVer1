@@ -9,6 +9,7 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MicroMEMSApp
 {
@@ -17,6 +18,7 @@ namespace MicroMEMSApp
         private bool isEditMode;
         private readonly TBYTDbEntities _tbytDbEntities;
         private readonly MainLKTBYTForm _mainLKTBYTForm;
+        private readonly LKTBYT_Table _lktbytToUpdate;
         public MainCreateUpdateLKTBYTForm(TBYTDbEntities tbytDbEntities, MainLKTBYTForm mainLKTBYTForm)
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace MicroMEMSApp
             this.isEditMode = false;
             labelTitleMainCreateUpdateLKTBYTForm.Text = "Them Linh Kien Thiet Bi Y Te";
             this.Text = "Them Linh Kien Thiet Bi Y Te";
+            
         }
 
         public MainCreateUpdateLKTBYTForm(TBYTDbEntities tbytDbEntities, LKTBYT_Table lktbytToUpdate, MainLKTBYTForm mainLKTBYTForm)
@@ -34,6 +37,7 @@ namespace MicroMEMSApp
             this._mainLKTBYTForm = mainLKTBYTForm;
             labelTitleMainCreateUpdateLKTBYTForm.Text = "Sua Linh Kien Thiet Bi Y Te";
             this.Text = "Sua Linh Kien Thiet Bi Y Te";
+            this._lktbytToUpdate = lktbytToUpdate;
 
             if (lktbytToUpdate == null)
             {
@@ -54,8 +58,6 @@ namespace MicroMEMSApp
             textBoxTenLK.Text = lktbytToUpdate.TenLK;
             textBoxDvt.Text = lktbytToUpdate.Dvt;
             textBoxSoLuong.Text = lktbytToUpdate.SoLuong.ToString();
-            //comboBoxTenTB.SelectedValue = lktbytToUpdate.IdTBYT; ???
-            //comboBoxTenTB.SelectedItem = lktbytToUpdate.TBYT_Table; ???
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -82,30 +84,54 @@ namespace MicroMEMSApp
                 }
 
                 string maLK = textBoxMaLK.Text;
-                string tenLk = textBoxTenLK.Text;
+                string tenLK = textBoxTenLK.Text;
                 string dvt = textBoxDvt.Text;
                 int soLuong = Convert.ToInt32(textBoxSoLuong.Text);
                 string tenTB = comboBoxTenTB.Text;
 
                 if (isValid == true)
                 {
-                    var newLKTBYT = new LKTBYT_Table();
-                    newLKTBYT.MaLK = maLK;
-                    newLKTBYT.TenLK = tenLk;
-                    newLKTBYT.Dvt = dvt;
-                    newLKTBYT.SoLuong = soLuong;
-                    newLKTBYT.IdTBYT = (int)comboBoxTenTB.SelectedValue;
+                    // Add function
+                    if (!isEditMode)
+                    {
+                        var newLKTBYT = new LKTBYT_Table();
+                        newLKTBYT.MaLK = maLK;
+                        newLKTBYT.TenLK = tenLK;
+                        newLKTBYT.Dvt = dvt;
+                        newLKTBYT.SoLuong = soLuong;
+                        newLKTBYT.IdTBYT = (int)comboBoxTenTB.SelectedValue;
+                        _tbytDbEntities.LKTBYT_Table.Add(newLKTBYT);
 
-                    _tbytDbEntities.LKTBYT_Table.Add(newLKTBYT);
+                    } 
+                    else // update function 
+                    {
+                        _lktbytToUpdate.MaLK = maLK;
+                        _lktbytToUpdate.TenLK = tenLK;
+                        _lktbytToUpdate.Dvt = dvt;
+                        _lktbytToUpdate.SoLuong = soLuong;
+                        _lktbytToUpdate.IdTBYT = (int) comboBoxTenTB.SelectedValue;
+                    }
+
+                    if (!isEditMode)
+                    {
+                        MessageBox.Show($"Ma Linh Kien: {maLK}\n\r" +
+                            $"Ten Linh Kien: {tenLK}\n\r" +
+                            $"Don vi tinh: {dvt}\n\r" +
+                            $"So Luong: {soLuong}\n\r" +
+                            $"Ten Thiet Bi: {tenTB}\n\r" +
+                            $"Them Linh Kien Thanh Cong");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Ma Linh Kien: {maLK}\n\r" +
+                            $"Ten Linh Kien: {tenLK}\n\r" +
+                            $"Don vi tinh: {dvt}\n\r" +
+                            $"So Luong: {soLuong}\n\r" +
+                            $"Ten Thiet Bi: {tenTB}\n\r" +
+                            $"Sua Linh Kien Thanh Cong");
+                    }
+
                     _tbytDbEntities.SaveChanges();
-
-                    MessageBox.Show($"Ma Linh Kien: {maLK}\n\r" +
-                                $"Ten Linh Kien: {tenLk}\n\r" +
-                                $"Don vi tinh: {dvt}\n\r" +
-                                $"So Luong: {soLuong}\n\r" +
-                                $"Ten Thiet Bi: {tenTB}\n\r" +
-                                $"Them Thiet Bi Thanh Cong");
-
                     _mainLKTBYTForm.PopulateGrid();
                     Close();
                 }
@@ -125,14 +151,52 @@ namespace MicroMEMSApp
         }
 
         private void MainCreateUpdateLKTBYTForm_Load(object sender, EventArgs e)
-        {
+        { 
+
             var lktbyts = _tbytDbEntities.TBYT_Table
-                .Select(q => new { Id = q.Id, TenTB = q.TenTB + " - " + q.MaTB})
+                .Select(q => new { Id = q.Id, TenTB = q.TenTB + " - " + q.MaTB })
                 .ToList();
 
             comboBoxTenTB.DisplayMember = "TenTB";
             comboBoxTenTB.ValueMember = "Id";
             comboBoxTenTB.DataSource = lktbyts;
+
+            // https://stackoverflow.com/questions/43802306/how-to-set-combobox-default-value
+            if (!isEditMode)
+            {
+                comboBoxTenTB.SelectedItem = null;
+                comboBoxTenTB.SelectedText = "--select--";
+            }
+            else
+            {
+
+                comboBoxTenTB.SelectedItem = new
+                {
+                    Id = _lktbytToUpdate.Id,
+                    TenTB = _lktbytToUpdate.TBYT_Table.TenTB + " - " + _lktbytToUpdate.TBYT_Table.MaTB
+                };
+                
+
+                /*
+                foreach (var lktbytItem in lktbyts)
+                {
+                    if (lktbytItem.Id == _lktbytToUpdate.Id)
+                    {
+                        comboBoxTenTB.SelectedItem = lktbytItem;
+                        MessageBox.Show(comboBoxTenTB.SelectedItem.ToString());
+                    }
+                    else
+                    {
+                        comboBoxTenTB.SelectedItem = null;
+                        MessageBox.Show("Null");
+                    }
+                }
+                */
+                
+                comboBoxTenTB.SelectedText = _lktbytToUpdate.TBYT_Table.TenTB + " - " + _lktbytToUpdate.TBYT_Table.MaTB;
+                comboBoxTenTB.SelectedValue = _lktbytToUpdate.Id;
+                //MessageBox.Show($"{(int)comboBoxTenTB.SelectedValue}");
+            }
         }
     }
 }

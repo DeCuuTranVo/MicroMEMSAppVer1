@@ -32,3 +32,8 @@ Step 3: Complete TBYT Module, now do LKTBYT module
 	3.2. DataGridView, CRUD in LKTBYT module
 
 Step 4: Use Crystal Report to output data in an Excel file?
+------------------------------------------------------------------------------
+
+Step 1: Separate View (Forms), Model (Entities), Controller (Services)
+Step 2: Re-code interface in Forms 
+Step 3: 
