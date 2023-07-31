@@ -147,11 +147,23 @@
     <Compile Include="Entities\AppDbContext.cs" />
     <Compile Include="Entities\TBYT.cs" />
     <Compile Include="Entities\TBYT_LK.cs" />
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmTBYT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmTBYT.Designer.cs">
       <DependentUpon>frmTBYT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTBYT_LK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTBYT_LK.Designer.cs">
+      <DependentUpon>frmTBYT_LK.cs</DependentUpon>
     </Compile>
     <Compile Include="LKTBYTCreateForm.cs">
       <SubType>Form</SubType>
@@ -192,6 +204,9 @@
     <Compile Include="MainLKTBYTForm.Designer.cs">
       <DependentUpon>MainLKTBYTForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SampleCodes\LoaiTB.cs" />
+    <Compile Include="SampleCodes\LoaiTB_Service.cs" />
+    <Compile Include="Services\TBYT_LK_Service.cs" />
     <Compile Include="Services\TBYT_Service.cs" />
     <Compile Include="TBYTDb.Context.cs">
       <AutoGen>True</AutoGen>
@@ -252,8 +267,14 @@
       <DependentUpon>TBYTDb.edmx</DependentUpon>
       <LastGenOutput>TBYTDb.cs</LastGenOutput>
     </Content>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTBYT.resx">
       <DependentUpon>frmTBYT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTBYT_LK.resx">
+      <DependentUpon>frmTBYT_LK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LKTBYTCreateForm.resx">
       <DependentUpon>LKTBYTCreateForm.cs</DependentUpon>

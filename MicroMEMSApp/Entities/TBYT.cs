@@ -17,9 +17,12 @@ namespace MicroMEMSApp.Entities
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Xml.Linq;
 
-    [Table("TBYT_Table")]
+    // https://stackoverflow.com/questions/32015348/dataannotations-support-in-windows-forms
+    [Table("TBYT")]
     public partial class TBYT
     {
         public TBYT()
@@ -27,18 +30,40 @@ namespace MicroMEMSApp.Entities
             this.TBYT_LK = new HashSet<TBYT_LK>();
         }
 
+        [Display(Name = "Id")]
         public int Id { get; set; }
+
+        [Display(Name = "Nhom Thiet Bi")]
         public string NhomTB { get; set; }
+
+        [Display(Name = "Loai Thiet Bi")]
         public string LoaiTB { get; set; }
+
+        [Display(Name = "Ma Thiet Bi")]
         public string MaTB { get; set; }
+
+        [Display(Name = "Ten Thiet Bi")]
         public string TenTB { get; set; }
+
+        [Display(Name = "Don vi tinh")]
         public string Dvt { get; set; }
+
+        [Display(Name = "Hang San Xuat")]
         public string HangSX { get; set; }
+
+        [Display(Name = "Nuoc San Xuat")]
         public string NuocSX { get; set; }
+
+        [Display(Name = "Nam San Xuat")]
         public int NamSX { get; set; }
+
+        [Display(Name = "Gia Tri")]
         public int GiaTri { get; set; }
+
+        [Display(Name = "So Lan Bao Tri Mot Nam")]
         public int SoLanBaoTriMotNam { get; set; }
 
+        [Display(AutoGenerateField = false)]
         public virtual ICollection<TBYT_LK> TBYT_LK { get; set; }
     }
 }

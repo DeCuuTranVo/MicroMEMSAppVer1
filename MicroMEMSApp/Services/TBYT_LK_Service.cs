@@ -2,24 +2,22 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MicroMEMSApp.Services
 {
-    internal class TBYT_Service
+    internal class TBYT_LK_Service
     {
         private readonly AppDbContext _db;
-        public TBYT_Service()
+
+        public TBYT_LK_Service()
         {
             _db = new AppDbContext();
         }
 
         bool disposed;
-
-
 
         protected virtual void Dispose(bool disposing)
         {
@@ -40,44 +38,45 @@ namespace MicroMEMSApp.Services
             GC.SuppressFinalize(this);
         }
 
-        public List<TBYT> GetAll()
+        public List<TBYT_LK> GetAll()
         {
-            //return _db.TBYTs.ToList();
+            //return _db.TBYT_LKs.ToList();
 
             try
             {
-                return _db.TBYTs.OrderBy(x => x.TenTB).ToList();
+                return _db.TBYT_LKs.OrderBy(x => x.TenLK).ToList();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
                 return null;
             }
         }
 
-        public TBYT GetOne(int id)
-        { 
-            return _db.TBYTs.Find(id);      
+        public TBYT_LK GetOne(int id)
+        {
+            return _db.TBYT_LKs.Find(id);
         }
 
-        public List<TBYT> Search(string tenTB)
+        public List<TBYT_LK> Search(string tenLK)
         {
             try
             {
                 //return _db.TBYTs.Where(x => x.TenTB.Contains(tenTB)).ToList();
-                return _db.TBYTs.Where(x => x.TenTB.Contains(tenTB)).OrderBy(y => y.TenTB).ToList();
+                return _db.TBYT_LKs.Where(x => x.TenLK.Contains(tenLK)).OrderBy(y => y.TenLK).ToList();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
             }
         }
 
-        public bool AddNew(TBYT tbyt)
+        public bool AddNew(TBYT_LK tbyt_lk)
         {
             try
             {
-                _db.TBYTs.Add(tbyt);
+                _db.TBYT_LKs.Add(tbyt_lk);
                 _db.SaveChanges();
                 return true;
             }
@@ -85,32 +84,25 @@ namespace MicroMEMSApp.Services
             {
                 MessageBox.Show(ex.Message);
                 return false;
-            }        
+            }
         }
 
-        public bool Update(TBYT obj)
+        public bool Update(TBYT_LK obj)
         {
             bool lreturn = false;
-            TBYT tbyt = _db.TBYTs.Find(obj.Id);
-            if (tbyt == null)
+            TBYT_LK tbyt_lk = _db.TBYT_LKs.Find(obj.Id);
+            if (tbyt_lk == null)
             {
-
                 lreturn = this.AddNew(obj);
             }
             else
             {
-                tbyt.NhomTB = obj.NhomTB;
-                tbyt.LoaiTB = obj.LoaiTB;
-                tbyt.MaTB = obj.MaTB;
-                tbyt.TenTB = obj.TenTB;
-                tbyt.Dvt = obj.Dvt;
+                // MaLK, TenLK, Dvt, SoLuong, IdTBYT
+                tbyt_lk.MaLK = obj.MaLK;
+                tbyt_lk.TenLK = obj.TenLK;
+                tbyt_lk.Dvt = obj.Dvt;
+                tbyt_lk.SoLuong = obj.SoLuong;
 
-                tbyt.HangSX = obj.HangSX;
-                tbyt.NuocSX = obj.NuocSX;
-                tbyt.NamSX = obj.NamSX;
-                tbyt.GiaTri = obj.GiaTri;
-                tbyt.SoLanBaoTriMotNam = obj.SoLanBaoTriMotNam;             
-                
                 _db.SaveChanges();
                 lreturn = true;
             }
@@ -119,27 +111,26 @@ namespace MicroMEMSApp.Services
 
         public bool Delete(int Id)
         {
-            TBYT tbyt = _db.TBYTs.Find(Id);
-            if (tbyt != null)
+            TBYT_LK tbyt_lk = _db.TBYT_LKs.Find(Id);
+            if (tbyt_lk != null)
             {
-                _db.TBYTs.Remove(tbyt);
-                _db.SaveChanges();
-                return true;
-            }
-            return false;           
-        }
-
-        public bool Delete(TBYT obj)
-        {
-            TBYT tbyt = _db.TBYTs.Find(obj.Id);
-            if (tbyt != null)
-            {
-                _db.TBYTs.Remove(tbyt);
+                _db.TBYT_LKs.Remove(tbyt_lk);
                 _db.SaveChanges();
                 return true;
             }
             return false;
         }
 
-    }    
+        public bool Delete(TBYT_LK obj)
+        {
+            TBYT_LK tbyt_lk = _db.TBYT_LKs.Find(obj.Id);
+            if (tbyt_lk != null)
+            {
+                _db.TBYT_LKs.Remove(tbyt_lk);
+                _db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+    }
 }
