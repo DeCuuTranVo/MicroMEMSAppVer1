@@ -144,6 +144,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\TBYT.cs" />
+    <Compile Include="Entities\AppDbContext.cs" />
+    <Compile Include="Entities\TBYT.cs" />
+    <Compile Include="Entities\TBYT_LK.cs" />
+    <Compile Include="Forms\frmTBYT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTBYT.Designer.cs">
+      <DependentUpon>frmTBYT.cs</DependentUpon>
+    </Compile>
     <Compile Include="LKTBYTCreateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +192,7 @@
     <Compile Include="MainLKTBYTForm.Designer.cs">
       <DependentUpon>MainLKTBYTForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\TBYT_Service.cs" />
     <Compile Include="TBYTDb.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -242,6 +252,9 @@
       <DependentUpon>TBYTDb.edmx</DependentUpon>
       <LastGenOutput>TBYTDb.cs</LastGenOutput>
     </Content>
+    <EmbeddedResource Include="Forms\frmTBYT.resx">
+      <DependentUpon>frmTBYT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LKTBYTCreateForm.resx">
       <DependentUpon>LKTBYTCreateForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,10 +338,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Forms\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
