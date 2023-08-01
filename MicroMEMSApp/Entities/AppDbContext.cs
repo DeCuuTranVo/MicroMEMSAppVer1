@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using System.Configuration;
+//using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
 
 namespace MicroMEMSApp.Entities
 {
-    internal class AppDbContext : DbContext
+    internal class AppDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
         public AppDbContext() //: base("name=AppDbContext")
         {
@@ -16,9 +19,14 @@ namespace MicroMEMSApp.Entities
 
         #region Thiet Bi Y Te
 
-        public DbSet<TBYT> TBYTs { get; set; }
-        public DbSet<TBYT_LK> TBYT_LKs { get; set; }
+        public Microsoft.EntityFrameworkCore.DbSet<TBYT> TBYTs { get; set; }
+        public Microsoft.EntityFrameworkCore.DbSet<TBYT_LK> TBYT_LKs { get; set; }
         #endregion
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["ThietBiYTeDatabase"].ConnectionString);
+        }
 
         
     }

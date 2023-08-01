@@ -44,7 +44,16 @@ namespace MicroMEMSApp.Services
 
             try
             {
-                return _db.TBYT_LKs.OrderBy(x => x.TenLK).ToList();
+                var result = _db.TBYT_LKs.OrderBy(x => x.TenLK).ToList();
+                if (result == null)
+                {
+                    MessageBox.Show("Null Result");
+                }
+                else
+                {
+                    MessageBox.Show(result.ToString());
+                }
+                return result;
             }
             catch (Exception ex)
             {

@@ -40,6 +40,13 @@
             this.tbxSoLuong = new System.Windows.Forms.TextBox();
             this.cbxTB = new System.Windows.Forms.ComboBox();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnClearSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,15 +144,84 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Location = new System.Drawing.Point(11, 7);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(37, 13);
+            this.lblTitle.Size = new System.Drawing.Size(139, 13);
             this.lblTitle.TabIndex = 5;
-            this.lblTitle.Text = "lblTitle";
+            this.lblTitle.Text = "Quản lý linh kiện thiết bị y tế";
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Location = new System.Drawing.Point(718, 35);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(75, 23);
+            this.btnCreate.TabIndex = 6;
+            this.btnCreate.Text = "Thêm";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(718, 65);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(718, 96);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(718, 2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 6;
+            this.btnRefresh.Text = "Tải lại";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            // 
+            // tbxSearch
+            // 
+            this.tbxSearch.Location = new System.Drawing.Point(14, 37);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(173, 20);
+            this.tbxSearch.TabIndex = 7;
+            this.tbxSearch.Text = "Nhập từ khóa ...";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(209, 35);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // btnClearSearch
+            // 
+            this.btnClearSearch.Location = new System.Drawing.Point(310, 35);
+            this.btnClearSearch.Name = "btnClearSearch";
+            this.btnClearSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnClearSearch.TabIndex = 6;
+            this.btnClearSearch.Text = "Làm mới";
+            this.btnClearSearch.UseVisualStyleBackColor = true;
             // 
             // frmTBYT_LK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 443);
+            this.Controls.Add(this.tbxSearch);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnClearSearch);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.cbxTB);
             this.Controls.Add(this.tbxSoLuong);
@@ -180,5 +256,12 @@
         private System.Windows.Forms.TextBox tbxSoLuong;
         private System.Windows.Forms.ComboBox cbxTB;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnClearSearch;
     }
 }

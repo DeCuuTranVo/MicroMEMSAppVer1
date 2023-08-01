@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,9 +56,41 @@ namespace MicroMEMSApp.Forms
 
         public void PopulateGrid()
         {
-            var lst = TBYT_LK_service.GetAll();
+            AppDbContext _db = new AppDbContext();
+            var lstTBYT_LK = _db.TBYT_LKs.ToList();
+            //var lstTBYT_LK = _db.TBYT_LKs.OrderBy(x => x.TenLK).ToList();
+            //var lstTBYT_LK = TBYT_LK_service.GetAll();
 
-            var displayList = lst.Select(
+            var displayList = lstTBYT_LK.Select(
+                x => new {
+                    Id = x.Id,
+                    MaLK = x.MaLK,
+                    TenLK = x.TenLK,
+                    Dvt = x.Dvt,
+                    SoLuong = x.SoLuong,
+                    TenTB = x.TBYT.TenTB
+                }).ToList();
+
+            grd.AutoGenerateColumns = true;
+            //grd.DataSource = lst;
+            grd.DataSource = displayList;
+
+            grd.Columns["Id"].HeaderText = "Id";
+            grd.Columns["MaLK"].HeaderText = "Mã Linh Kiện";
+            grd.Columns["TenLK"].HeaderText = "Tên Linh Kiện";
+            grd.Columns["Dvt"].HeaderText = "Đơn vị tính";
+            grd.Columns["SoLuong"].HeaderText = "Số Lượng";
+
+            grd.Columns["Id"].Visible = false;
+            grd.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            grd.DefaultCellStyle.Font = new Font("Arial", 8, FontStyle.Regular);
+
+            grd.Columns["TenLK"].Width = 150;
+        }
+
+        public void PopulateGrid(List<TBYT_LK> lstTBYT_LK)
+        {
+            var displayList = lstTBYT_LK.Select(
                 x => new {
                     x.Id,
                     x.MaLK,
@@ -65,7 +98,6 @@ namespace MicroMEMSApp.Forms
                     x.Dvt,
                     x.SoLuong
                 }).ToList();
-
 
             grd.AutoGenerateColumns = true;
             //grd.DataSource = lst;
@@ -90,12 +122,14 @@ namespace MicroMEMSApp.Forms
             tbxTenLK.Text = "";
             tbxDvt.Text = "";
             tbxSoLuong.Text = "";
-            cbxTB.SelectedValue = null;        
+            cbxTB.SelectedValue = null;
+            cbxTB.SelectedIndex = -1;
         }
 
         private void FrmTBYT_LK_Load(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
+            PopulateGrid();
+            ClearTextBoxesAndComboBoxes();
         }
     }
 }
